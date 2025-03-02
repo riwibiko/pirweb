@@ -1,0 +1,237 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Лаб 1а</title>
+</head>
+
+<body>
+<style>
+  #demo {
+    border-collapse : collapse;
+    margin-left     : auto;
+    margin-right    : auto;
+	width           : 1200px;
+	height          : 400px;
+  }
+  
+  #demo td {
+    border-style : dashed; 
+	border-width : 2px;
+	border-color : black;
+    text-align   : left;	
+	padding      : 5px 10px 5px 10px;
+	background-color : yellow;	
+  }
+ 
+  #demo th {
+    border-style : dashed; 
+	border-width : 2px;	
+	border-color : black;	
+	padding      : 5px 10px 5px 10px;
+  } 
+  
+  .header1 {
+    text-align : left;
+    font-size  : 20px;
+	color      : red;
+	background-color : orange;	
+  }
+  
+  .header2 {
+    text-align : center;
+    font-size  : 15px;	
+	color      : gold;	
+	background-color : yellow;	
+  }
+  
+  .header3 {
+    text-align : left;
+    font-size  : 12px;
+	color      : green;
+	background-color : yellow;	
+  }
+  
+  .text1 {
+    font-style  : italic;
+	color       : #345678;
+	text-decoration: underline;
+    text-align  : left;	
+  }
+
+  .text2 {
+    font-weight : bold;
+	font-size   : 14px;
+    text-align  : right;	
+  }  
+  
+  .text3 {
+	font-size    : 15px;
+	color        : blue;
+    font-family  : "Roboto Flex", sans-serif;
+	font-stretch : extra-expanded;
+    text-align   : center;	
+  }    
+ 
+  .text4 {
+	color        : rgb(255, 99, 71);
+	font-stretch : condensed;
+	font-family  : "Roboto Flex", sans-serif;
+	text-align   : justify;
+  }  
+  
+  .text5 {
+	color        : rgb(76, 54, 32);
+	font-family  : "Impact", "Fantasy";
+  }   
+
+  .text6 {
+	color        : blue;
+	text-decoration: underline;
+  }   
+  
+  .text7 {
+	text-decoration: underline;
+  } 
+  
+  .text8 {
+	font-weight : bold;
+  } 
+  
+  .text9 {
+	font-weight : normal;
+  } 
+  
+  #list01 {
+	list-style-type: none;
+  }
+  
+  #list01 > li:before {
+    content: counter(list) ") ";
+  }
+  
+  #list01 > li { 
+    counter-increment: list;
+	margin-left:-3.6em;
+  }
+  
+  #list02 {
+	list-style-type: none;
+  } 
+  #list02 > li:before {
+    content: counter(list, lower-alpha) ") ";
+  }
+  
+  #list02 > li { 
+    counter-increment: list;
+	margin-left:-3.5em;	
+  }
+
+  #list03 > li { 
+    list-style: none;
+	position : relative;
+	counter-increment: section;
+  }
+
+  #list03 > li::before {
+    content: counter(section, upper-roman);
+    position: absolute;
+    left: -30px;
+  }
+
+  
+</style>
+
+<table border=1 id=demo>
+  <caption>Шахматы</caption>
+  <tbody>
+  <tr>
+    <th class=header1>Шахматные фигуры</th>
+	<th class=header2 colspan=3>Особенности шахмат</th>
+	<th class=header3>Турниры</th>
+  </tr>
+  <tr>
+    <td rowspan=3 class=text1>
+	   Фигуры
+	   <img src="figury.jpeg" width="100" height="60" alt="figury  ">
+	</td>
+    <td class=text2>Cтратегии</td>
+    <td rowspan=2><img src="chess.png" width="100" height="60" alt="chess"></td>
+    <td class=text4>123</td>
+    <td rowspan=3 class=text3>
+	   <span>Турниры по шахматам</span>
+	   <img src="trnr.jpg" width="100" height="60" alt="turniry">	  
+    </td>
+  </tr>
+  <tr>
+	<td rowspan=2>
+	    <span class=header3>Тактики</span>
+	    <span>
+	      <ol type=1>
+		     <li><strong>Простые</strong>
+			   <ol type=1>
+			       <li class=text6 style="margin-left:15px">Вилка
+			       <li class=text6 style="margin-left:15px">Связка
+			       <li class=text6 style="margin-left:15px">Мельница
+               </ol>
+			   
+			 <li><strong>Сложные</strong>
+			    <ul style="list-style-type: disc;"> 
+			       <li style="margin-top:15px;">Греческий дар
+			       <li>Жертва на h7           
+				</ul> 
+
+		  </ol>
+	    </span>
+	</td>
+	<td class=text5>Путь шахматиста</td>
+  </tr>
+  <tr>
+     <td>Виды шахмат:
+	   <ol style="list-style-type:'- ' ">
+	      <li style="margin-bottom:15px">Классические шахматы
+		  <li>Шахматы на круглой доске
+	   </ol>
+	 </td>
+	 <td>
+	    <ol id=list03>
+		  <li><span class=text7>Фигуры:</span>
+		     <ol type=A class=text8>
+			    <li style="margin-left:-2.5em;">Цвет
+				
+				  <ol id=list01 class=text9>
+					<li>Чёрный
+					<li>Белый
+				  </ol>
+				  
+				<li style="margin-left:-2.5em;">Крутость
+				
+				  <ol id=list02 class=text9>
+					<li>Ферзь
+					<li>Все остальные
+				  </ol>
+				  
+             </ol>				
+		  <li><span class=text7>Направления хода:</span>
+		     <ol type=A class=text8>
+			    <li style="margin-left:-2.5em;">По правилам
+				  <ol type=1 class=text9>
+					<li style="margin-left:-2.5em;">По чёрным полям
+					<li style="margin-left:-2.5em;">По белым полям
+				  </ol>
+				
+				<li style="margin-left:-2.5em;">Не совсем по правилам
+				  <ol style="list-style-type:' ' " class=text9>
+					<li style="margin-top:15px;margin-left:-3.5em;">По обратной стороне доски
+					<li style="margin-top:15px;margin-left:-3.5em;">В четвёртом измерении
+				  </ol>
+				
+             </ol>			
+             </ol>		  
+		<ol>   
+	 </td>
+  </tr>
+</tbody>
+</table>
+</body>
+</html>
